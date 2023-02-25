@@ -9,4 +9,5 @@ export const environment = {
     authDomain: 'roulette-aee9f.firebaseapp.com',
     messagingSenderId: '775812481325',
     measurementId: 'G-2HMVSPP986',
-  },};
+  },
+};

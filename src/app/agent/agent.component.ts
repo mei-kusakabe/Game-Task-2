@@ -20,7 +20,6 @@ export class AgentComponent {
     // console.log(this.disId)
     // console.log(this.sub_disId)
 
-
     firebaseDatabase.list('admin/' + this.disId + '/sub-dis/' + this.sub_disId + '/agent').valueChanges().forEach(agents => {
 
       // console.log(agents);
