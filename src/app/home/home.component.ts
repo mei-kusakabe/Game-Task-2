@@ -3,7 +3,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
-import{Database} from '@angular/fire/database'
+import { Database } from '@angular/fire/database'
 import { NgForm } from '@angular/forms';
 
 
@@ -17,24 +17,24 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  des_arr:any= [];
+  des_arr: any = [];
   constructor(public db: AngularFireDatabase) {
-    db.list('admin').valueChanges().forEach(data=>{
-      this.des_arr = (data) 
+    db.list('admin').valueChanges().forEach(data => {
+      this.des_arr = (data)
     })
-   }
-   
-   ngOnInit() {
-      console.log(this.des_arr,"uhu")
-   }
+  }
 
-   addDes(value:NgForm['value']) {
+  ngOnInit() {
+    console.log(this.des_arr, "uhu")
+  }
+
+  addDes(value: NgForm['value']) {
     this.db.list(value.sadf)
-   }
+  }
 
-   delete(id:string) {
+  delete(id: string) {
     console.log("alkjsd")
-    this.db.list('admin/'+id).remove();
+    this.db.list('admin/' + id).remove();
     console.log("asldjklf")
-   }
+  }
 }
