@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AgentListComponent {
   des_arr = [];
-    constructor() {
+  constructor() {
 
-    }
+  }
 }
